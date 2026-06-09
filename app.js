@@ -1,50 +1,57 @@
-const messages = document.getElementById('messages');
-const form = document.getElementById('chatForm');
-const input = document.getElementById('prompt');
+const input = document.querySelector(".chat-input input");
+const sendBtn = document.querySelector(".chat-input button");
 
-function add(text, cls) {
-  const div = document.createElement('div');
-  div.className = cls;
-  div.textContent = text;
-  messages.appendChild(div);
-  messages.scrollTop = messages.scrollHeight;
+const aiBubble = document.querySelector(".bubble.ai");
+
+function cevapVer() {
+  const mesaj = input.value.toLowerCase();
+
+  if (mesaj.includes("uygulama")) {
+    aiBubble.innerHTML =
+      "📱 Android ve iOS uygulaması oluşturma moduna geçildi.";
+  }
+
+  else if (mesaj.includes("oyun")) {
+    aiBubble.innerHTML =
+      "🎮 Oyun geliştirme moduna geçildi.";
+  }
+
+  else if (mesaj.includes("web")) {
+    aiBubble.innerHTML =
+      "🌐 Web sitesi oluşturma moduna geçildi.";
+  }
+
+  else if (mesaj.includes("güvenlik")) {
+    aiBubble.innerHTML =
+      "🛡️ Güvenlik analizi başlatıldı.";
+  }
+
+  else if (mesaj.includes("merhaba")) {
+    aiBubble.innerHTML =
+      "👋 Merhaba Ferhat, sana nasıl yardımcı olabilirim?";
+  }
+
+  else {
+    aiBubble.innerHTML =
+      "🤖 Ferhat AI komutunu işliyor...";
+  }
+
+  input.value = "";
 }
 
-async function askAI(q) {
-  const res = await fetch('/.netlify/functions/chat', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({ message: q })
-  });
+sendBtn.addEventListener("click", cevapVer);
 
-  const data = await res.json();
-  return data.reply || 'Cevap alınamadı.';
-}
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const q = input.value.trim();
-  if (!q) return;
-
-  add(q, 'user');
-  input.value = '';
-  add('Ferhat AI düşünüyor...', 'bot');
-
-  try {
-    const reply = await askAI(q);
-    messages.lastChild.textContent = reply;
-  } catch (err) {
-    messages.lastChild.textContent = 'Bağlantı hatası oluştu.';
+input.addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    cevapVer();
   }
 });
 
-document.querySelectorAll('[data-action]').forEach(b => {
-  b.onclick = () => {
-    input.value = b.textContent.trim();
-    input.focus();
-  };
-});
+const voiceBtn = document.querySelector(".voice-float");
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js');
+if (voiceBtn) {
+  voiceBtn.addEventListener("click", () => {
+    aiBubble.innerHTML =
+      "🎤 Sesli komut sistemi V6 aktif.";
+  });
 }
