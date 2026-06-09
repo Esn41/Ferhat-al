@@ -69,3 +69,34 @@ chatInput.addEventListener("keypress",(e)=>{
     }
 
 });
+
+const voiceBtn = document.getElementById("voiceFloat");
+
+if ("webkitSpeechRecognition" in window) {
+
+  const recognition = new webkitSpeechRecognition();
+
+  recognition.lang = "tr-TR";
+  recognition.continuous = false;
+  recognition.interimResults = false;
+
+  voiceBtn.addEventListener("click", () => {
+
+    recognition.start();
+
+    addMessage("🎤 Dinleniyor...", "ai");
+
+  });
+
+  recognition.onresult = (event) => {
+
+    const speech =
+      event.results[0][0].transcript;
+
+    chatInput.value = speech;
+
+    sendBtn.click();
+
+  };
+
+}
