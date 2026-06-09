@@ -1,48 +1,132 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#050816" />
-  <title>Ferhat AI</title>
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <main class="app">
-    <header class="topbar">
-  <button class="menu-btn">☰</button>
-  <div>
-    <strong>Ferhat AI</strong>
-    <small>Premium Asistan</small>
-  </div>
-  <button class="profile-btn">👤</button>
-</header>
-    <section class="hero">
-      <div class="logo">FA</div>
-      <h1>Ferhat AI</h1>
-      <p>Hayal et, oluştur, yönet.</p>
-    </section>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ferhat AI</title>
 
-    <section class="chat">
-      <div id="messages" class="messages">
-        <div class="msg bot">Merhaba Ferhat. Ben Ferhat AI. Uygulama, oyun, görev ve fikir üretiminde sana yardımcı olurum.</div>
-      </div>
-      <form id="chatForm" class="composer">
-        <input id="prompt" placeholder="Ne yapmak istiyorsun?" autocomplete="off" />
-        <button>Gönder</button>
-  </form>
-    </section>
-      <section class="actions">
-  <button class="action" data-action="Uygulama fikri oluştur">📱 Uygulama Oluştur</button>
-  <button class="action" data-action="Oyun fikri oluştur">🎮 Oyun Oluştur</button>
-  <button class="action" data-action="Bugün için görev planı yap">✅ Görev Planla</button>
-  <button class="action" data-action="Güvenlik kontrol listesi oluştur">🔒 Güvenlik</button>
-  <button class="action" data-action="Konum paylaşımı için güvenli plan oluştur">📍 Konum</button>
-  <button class="action" data-action="Android ve iPhone yayınlama planı oluştur">🚀 Yayınla</button>
-</section> 
-    </main>
-<script src="app.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ÜST MENÜ -->
+    <div class="top-bar">
+
+        <div class="logo">
+            FA
+        </div>
+
+        <div class="top-icons">
+            <button class="icon-btn">
+                <i class="fas fa-bell"></i>
+            </button>
+
+            <button class="icon-btn">
+                <i class="fas fa-user"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- KARŞILAMA -->
+    <div class="hero">
+
+        <h1>Ferhat AI</h1>
+
+        <p>
+            Hayal et, oluştur, yönet.
+            Yapay zekâ destekli uygulama ve proje geliştirme platformu.
+        </p>
+
+        <button>
+            Yeni Proje Oluştur
+        </button>
+
+    </div>
+
+    <!-- ÖZELLİKLER -->
+    <div class="grid">
+
+        <div class="card">
+            <span>🤖</span>
+            <h3>AI Sohbet</h3>
+            <p>Gelişmiş yapay zekâ desteği.</p>
+        </div>
+
+        <div class="card">
+            <span>📱</span>
+            <h3>Uygulama Oluştur</h3>
+            <p>Android ve iOS uygulamaları üret.</p>
+        </div>
+
+        <div class="card">
+            <span>🌐</span>
+            <h3>Web Sitesi</h3>
+            <p>Tek tıkla web projeleri oluştur.</p>
+        </div>
+
+        <div class="card">
+            <span>🎮</span>
+            <h3>Oyun Geliştir</h3>
+            <p>2D ve 3D oyun projeleri oluştur.</p>
+        </div>
+
+    </div>
+
+    <!-- CHAT -->
+    <div class="chat-box">
+
+        <h2>Ferhat AI Asistan</h2>
+
+        <div class="chat-input">
+
+            <input
+                type="text"
+                placeholder="Bir şeyler yaz..."
+            >
+
+            <button>
+                <i class="fas fa-paper-plane"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ALT MENÜ -->
+
+<div class="bottom-nav">
+
+    <a href="#" class="active">
+        <i class="fas fa-home"></i><br>
+        Ana Sayfa
+    </a>
+
+    <a href="#">
+        <i class="fas fa-robot"></i><br>
+        AI
+    </a>
+
+    <a href="#">
+        <i class="fas fa-code"></i><br>
+        Oluştur
+    </a>
+
+    <a href="#">
+        <i class="fas fa-cog"></i><br>
+        Ayarlar
+    </a>
+
+</div>
+
 </body>
 </html>
 
