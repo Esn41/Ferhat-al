@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#050816" />
+  <title>Ferhat AI</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div class="logo">FA</div>
+      <h1>Ferhat AI</h1>
+      <p>Hayal et, oluştur, yönet.</p>
+    </section>
+
+    <section class="chat">
+      <div id="messages" class="messages">
+        <div class="msg bot">Merhaba Ferhat. Ben Ferhat AI. Uygulama, oyun, görev ve fikir üretiminde sana yardımcı olurum.</div>
+      </div>
+      <form id="chatForm" class="composer">
+        <input id="prompt" placeholder="Ne yapmak istiyorsun?" autocomplete="off" />
+        <button>Gönder</button>
+      </form>
+    </section>
+
+    <section class="grid">
+      <button data-action="Uygulama fikri oluştur">📱 Uygulama Oluştur</button>
+      <button data-action="Oyun fikri oluştur">🎮 Oyun Oluştur</button>
+      <button data-action="Bugün için görev planı yap">✅ Görev Planla</button>
+      <button data-action="Güvenlik kontrol listesi hazırla">🔒 Güvenlik</button>
+      <button data-action="Konum paylaşımı için güvenli sistem tasarla">📍 Konum</button>
+      <button data-action="Android ve iPhone yayınlama planı çıkar">🚀 Yayınla</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
