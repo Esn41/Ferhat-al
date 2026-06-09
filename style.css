@@ -60,4 +60,23 @@ button{border:0;border-radius:18px;padding:0 20px;background:linear-gradient(135
   0%{transform:translateY(0)}
   50%{transform:translateY(-10px)}
   100%{transform:translateY(0)}
+}.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:rgba(15,23,42,.75);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:22px;
+  padding:14px 16px;
+  margin-bottom:18px;
+  backdrop-filter:blur(18px);
+}
+.topbar strong{display:block;font-size:18px}
+.topbar small{color:#8fb3ff;font-size:12px}
+.menu-btn,.profile-btn{
+  width:44px;
+  height:44px;
+  border-radius:15px;
+  padding:0;
+  font-size:20px;
 }
