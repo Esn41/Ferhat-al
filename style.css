@@ -8,25 +8,24 @@
 body{
   min-height:100vh;
   background:
-    radial-gradient(circle at top left,rgba(34,211,238,.35),transparent 30%),
-    radial-gradient(circle at top right,rgba(37,99,235,.35),transparent 35%),
-    linear-gradient(180deg,#06172f,#020617 60%,#000);
-  color:white;
+    radial-gradient(circle at 20% 0%,rgba(34,211,238,.35),transparent 32%),
+    radial-gradient(circle at 90% 10%,rgba(37,99,235,.35),transparent 35%),
+    linear-gradient(180deg,#06172f,#020617 58%,#000);
+  color:#fff;
   overflow-x:hidden;
 }
 
 .app{
   max-width:430px;
   margin:auto;
-  padding:28px 20px 110px;
+  padding:26px 20px 115px;
 }
 
-/* ÜST */
-.top{
+.topbar{
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  margin-bottom:28px;
+  align-items:center;
+  margin-bottom:22px;
 }
 
 .brand{
@@ -35,17 +34,17 @@ body{
   gap:12px;
 }
 
-.mini-logo{
-  width:54px;
-  height:54px;
-  border-radius:18px;
+.logo{
+  width:58px;
+  height:58px;
+  border-radius:20px;
   background:linear-gradient(135deg,#67e8f9,#2563eb);
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:22px;
   font-weight:900;
-  box-shadow:0 0 35px rgba(56,189,248,.55);
+  font-size:23px;
+  box-shadow:0 0 40px rgba(56,189,248,.65);
 }
 
 .brand h2{
@@ -62,37 +61,36 @@ body{
   width:9px;
   height:9px;
   display:inline-block;
+  margin-right:6px;
   border-radius:50%;
   background:#22c55e;
-  box-shadow:0 0 12px #22c55e;
-  margin-right:6px;
+  box-shadow:0 0 14px #22c55e;
 }
 
 .profile{
-  width:48px;
-  height:48px;
+  width:50px;
+  height:50px;
   border:none;
-  border-radius:17px;
+  border-radius:18px;
   background:rgba(255,255,255,.1);
   color:white;
   font-size:22px;
-  backdrop-filter:blur(16px);
+  backdrop-filter:blur(18px);
 }
 
-/* HERO */
 .hero{
   padding:26px;
   border-radius:32px;
-  background:rgba(15,23,42,.75);
-  border:1px solid rgba(255,255,255,.12);
-  backdrop-filter:blur(22px);
-  box-shadow:0 25px 70px rgba(0,0,0,.35);
+  background:rgba(15,23,42,.72);
+  border:1px solid rgba(255,255,255,.14);
+  backdrop-filter:blur(24px);
+  box-shadow:0 25px 70px rgba(0,0,0,.38);
 }
 
 .hero h1{
-  font-size:32px;
+  font-size:33px;
   line-height:1.15;
-  margin-bottom:8px;
+  margin-bottom:10px;
 }
 
 .hero p{
@@ -102,27 +100,27 @@ body{
   margin-bottom:20px;
 }
 
-.search-box{
-  height:58px;
+.command-box{
   display:flex;
   gap:10px;
+  height:58px;
 }
 
-.search-box input{
+.command-box input{
   flex:1;
   min-width:0;
   border:none;
   outline:none;
   border-radius:20px;
-  background:rgba(2,6,23,.8);
-  color:white;
+  background:rgba(2,6,23,.82);
+  color:#fff;
   padding:0 18px;
   font-size:15px;
   font-weight:700;
-  border:1px solid rgba(96,165,250,.28);
+  border:1px solid rgba(96,165,250,.3);
 }
 
-.search-box button{
+.command-box button{
   width:58px;
   border:none;
   border-radius:20px;
@@ -130,60 +128,58 @@ body{
   font-size:22px;
 }
 
-/* KARTLAR */
-.quick-grid{
+.actions{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:14px;
   margin-top:22px;
 }
 
-.card{
-  min-height:145px;
+.action{
+  min-height:140px;
   padding:18px;
   border-radius:28px;
   background:rgba(15,23,42,.72);
-  border:1px solid rgba(148,163,184,.22);
+  border:1px solid rgba(148,163,184,.24);
   backdrop-filter:blur(20px);
   box-shadow:0 18px 45px rgba(0,0,0,.28);
 }
 
-.card:active{
+.action:active{
   transform:scale(.97);
 }
 
-.icon{
+.action span{
   font-size:34px;
-  margin-bottom:14px;
 }
 
-.card h3{
+.action h3{
+  margin-top:12px;
   font-size:20px;
-  margin-bottom:7px;
 }
 
-.card p{
+.action p{
+  margin-top:6px;
   color:#94a3b8;
   font-size:14px;
   font-weight:650;
 }
 
-/* CHAT */
-.chat-panel{
+.chat{
   margin-top:24px;
   padding:22px;
   border-radius:30px;
   background:rgba(2,6,23,.78);
-  border:1px solid rgba(56,189,248,.22);
+  border:1px solid rgba(56,189,248,.24);
   backdrop-filter:blur(22px);
 }
 
-.chat-panel h2{
+.chat h2{
   font-size:23px;
   margin-bottom:16px;
 }
 
-.message{
+.bubble{
   max-width:85%;
   padding:14px 16px;
   border-radius:20px;
@@ -193,24 +189,24 @@ body{
   line-height:1.4;
 }
 
-.message.ai{
+.bubble.ai{
   background:rgba(30,41,59,.95);
   color:#e5e7eb;
   border-bottom-left-radius:6px;
 }
 
-.message.user{
+.bubble.user{
+  margin-left:auto;
   background:linear-gradient(135deg,#67e8f9,#2563eb);
   color:#020617;
-  margin-left:auto;
   border-bottom-right-radius:6px;
 }
 
 .chat-input{
-  margin-top:18px;
-  height:56px;
   display:flex;
   gap:10px;
+  height:56px;
+  margin-top:18px;
 }
 
 .chat-input input{
@@ -237,7 +233,6 @@ body{
   font-weight:900;
 }
 
-/* ALT MENÜ */
 .bottom-nav{
   position:fixed;
   bottom:18px;
@@ -250,7 +245,7 @@ body{
   justify-content:space-around;
   align-items:center;
   border-radius:28px;
-  background:rgba(15,23,42,.92);
+  background:rgba(15,23,42,.94);
   border:1px solid rgba(255,255,255,.12);
   backdrop-filter:blur(24px);
   box-shadow:0 0 45px rgba(0,0,0,.55);
@@ -276,17 +271,16 @@ body{
   color:#67e8f9;
 }
 
-/* MOBİL */
 @media(max-width:380px){
   .app{
-    padding:22px 14px 105px;
+    padding:22px 14px 110px;
   }
 
   .hero h1{
-    font-size:28px;
+    font-size:29px;
   }
 
-  .card{
+  .action{
     min-height:130px;
   }
 }
