@@ -1,81 +1,90 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ferhat AI</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferhat AI V3</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="background"></div>
+  <div class="app">
 
-<div class="container">
-
-    <div class="status">
-        <div class="dot"></div>
-        AI Online
-    </div>
-
-    <div class="logo">
-        FA
-    </div>
-
-    <h1>Ferhat AI</h1>
-    <p class="subtitle">
-        Hayal et, oluştur, yönet.
-    </p>
-
-    <div class="welcome">
-        <h2>Merhaba Ferhat 👋</h2>
-        <p>
-            Uygulama, web sitesi, oyun ve projelerini
-            yapay zekâ desteğiyle oluştur.
-        </p>
-    </div>
-
-    <div class="cards">
-
-        <div class="card">
-            <div class="icon">📱</div>
-            <h3>Uygulama</h3>
-            <p>Android ve iOS projeleri</p>
+    <header class="top">
+      <div class="brand">
+        <div class="mini-logo">FA</div>
+        <div>
+          <h2>Ferhat AI</h2>
+          <p><span></span> AI Online</p>
         </div>
+      </div>
+      <button class="profile">👤</button>
+    </header>
 
-        <div class="card">
-            <div class="icon">🎮</div>
-            <h3>Oyun</h3>
-            <p>2D ve 3D oyunlar</p>
-        </div>
+    <section class="hero">
+      <h1>Merhaba Ferhat 👋</h1>
+      <p>Bugün ne oluşturmak istiyorsun?</p>
 
-        <div class="card">
-            <div class="icon">🌐</div>
-            <h3>Web Site</h3>
-            <p>Modern web projeleri</p>
-        </div>
+      <div class="search-box">
+        <input type="text" placeholder="Uygulama, oyun, web sitesi yaz...">
+        <button>🎤</button>
+      </div>
+    </section>
 
-        <div class="card">
-            <div class="icon">🤖</div>
-            <h3>AI Asistan</h3>
-            <p>Akıllı yardım sistemi</p>
-        </div>
+    <section class="quick-grid">
 
-    </div>
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Uygulama</h3>
+        <p>Android ve iOS</p>
+      </div>
 
-    <div class="chat">
+      <div class="card">
+        <div class="icon">🎮</div>
+        <h3>Oyun</h3>
+        <p>2D / 3D oyun</p>
+      </div>
 
-        <input
-        type="text"
-        placeholder="Ne oluşturmak istiyorsun?">
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>Web Site</h3>
+        <p>Modern tasarım</p>
+      </div>
 
-        <button>
-            Gönder
-        </button>
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>AI Sohbet</h3>
+        <p>Akıllı asistan</p>
+      </div>
 
-    </div>
+    </section>
 
-</div>
+    <section class="chat-panel">
+      <h2>Ferhat AI Asistan</h2>
+
+      <div class="message ai">
+        Merhaba Ferhat, uygulama mı oluşturmak istiyorsun?
+      </div>
+
+      <div class="message user">
+        Yeni proje oluştur
+      </div>
+
+      <div class="chat-input">
+        <input type="text" placeholder="Mesaj yaz...">
+        <button>➤</button>
+      </div>
+    </section>
+
+  </div>
+
+  <nav class="bottom-nav">
+    <a class="active" href="#">🏠<span>Ana</span></a>
+    <a href="#">🤖<span>AI</span></a>
+    <a href="#">➕<span>Oluştur</span></a>
+    <a href="#">⚙️<span>Ayarlar</span></a>
+  </nav>
 
 </body>
 </html>
