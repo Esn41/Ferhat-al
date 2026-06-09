@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ferhat AI V3</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ferhat AI V4</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <main class="app">
 
-  <div class="app">
-
-    <header class="top">
+    <header class="topbar">
       <div class="brand">
-        <div class="mini-logo">FA</div>
+        <div class="logo">FA</div>
         <div>
           <h2>Ferhat AI</h2>
           <p><span></span> AI Online</p>
@@ -24,60 +23,53 @@
 
     <section class="hero">
       <h1>Merhaba Ferhat 👋</h1>
-      <p>Bugün ne oluşturmak istiyorsun?</p>
+      <p>Bugün uygulama, oyun veya web sitesi oluşturalım.</p>
 
-      <div class="search-box">
-        <input type="text" placeholder="Uygulama, oyun, web sitesi yaz...">
+      <div class="command-box">
+        <input type="text" placeholder="Ne oluşturmak istiyorsun?" />
         <button>🎤</button>
       </div>
     </section>
 
-    <section class="quick-grid">
-
-      <div class="card">
-        <div class="icon">📱</div>
+    <section class="actions">
+      <div class="action">
+        <span>📱</span>
         <h3>Uygulama</h3>
         <p>Android ve iOS</p>
       </div>
 
-      <div class="card">
-        <div class="icon">🎮</div>
+      <div class="action">
+        <span>🎮</span>
         <h3>Oyun</h3>
-        <p>2D / 3D oyun</p>
+        <p>2D / 3D</p>
       </div>
 
-      <div class="card">
-        <div class="icon">🌐</div>
+      <div class="action">
+        <span>🌐</span>
         <h3>Web Site</h3>
         <p>Modern tasarım</p>
       </div>
 
-      <div class="card">
-        <div class="icon">🤖</div>
+      <div class="action">
+        <span>🤖</span>
         <h3>AI Sohbet</h3>
         <p>Akıllı asistan</p>
       </div>
-
     </section>
 
-    <section class="chat-panel">
+    <section class="chat">
       <h2>Ferhat AI Asistan</h2>
 
-      <div class="message ai">
-        Merhaba Ferhat, uygulama mı oluşturmak istiyorsun?
-      </div>
-
-      <div class="message user">
-        Yeni proje oluştur
-      </div>
+      <div class="bubble ai">Merhaba Ferhat, nasıl bir proje yapmak istiyorsun?</div>
+      <div class="bubble user">Yeni proje oluştur</div>
 
       <div class="chat-input">
-        <input type="text" placeholder="Mesaj yaz...">
+        <input type="text" placeholder="Mesaj yaz..." />
         <button>➤</button>
       </div>
     </section>
 
-  </div>
+  </main>
 
   <nav class="bottom-nav">
     <a class="active" href="#">🏠<span>Ana</span></a>
@@ -85,6 +77,5 @@
     <a href="#">➕<span>Oluştur</span></a>
     <a href="#">⚙️<span>Ayarlar</span></a>
   </nav>
-
 </body>
 </html>
