@@ -185,6 +185,9 @@ body{
   min-height:140px;
   padding:18px;
   border-radius:28px;
+  color:white;
+  text-align:left;
+  cursor:pointer;
 }
 
 .action:active{
@@ -250,6 +253,11 @@ body{
   border-radius:30px;
 }
 
+.chat-messages{
+  display:flex;
+  flex-direction:column;
+}
+
 .bubble{
   max-width:85%;
   padding:14px 16px;
@@ -281,6 +289,10 @@ body{
   display:flex;
   gap:5px;
   margin-bottom:14px;
+}
+
+.typing.hidden{
+  display:none;
 }
 
 .typing span{
