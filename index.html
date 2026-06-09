@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ferhat AI V5</title>
+  <title>Ferhat AI V6</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -21,62 +21,53 @@
       </div>
 
       <div class="top-actions">
-        <button>🔔</button>
-        <button>👤</button>
+        <button id="notifyBtn">🔔</button>
+        <button id="profileBtn">👤</button>
       </div>
     </header>
 
     <section class="hero">
-      <div class="badge">⚡ Premium AI Platform</div>
+      <div class="badge">⚡ V6 Akıllı Asistan</div>
 
       <h1>Merhaba Ferhat 👋</h1>
-      <p>Uygulama, oyun, web sitesi ve görevlerini yapay zekâ ile oluştur.</p>
+      <p>Komut yaz, Ferhat AI uygulama, oyun, web sitesi ve görev planı hazırlasın.</p>
 
       <div class="command-box">
-        <input type="text" placeholder="Ne oluşturmak istiyorsun?" />
-        <button>🎤</button>
+        <input id="mainInput" type="text" placeholder="Örn: Bana oyun fikri oluştur" />
+        <button id="mainMic">🎤</button>
       </div>
     </section>
 
     <section class="stats">
-      <div>
-        <strong>12</strong>
-        <span>Proje</span>
-      </div>
-      <div>
-        <strong>4</strong>
-        <span>Görev</span>
-      </div>
-      <div>
-        <strong>AI</strong>
-        <span>Aktif</span>
-      </div>
+      <div><strong id="projectCount">12</strong><span>Proje</span></div>
+      <div><strong id="taskCount">4</strong><span>Görev</span></div>
+      <div><strong>AI</strong><span>Aktif</span></div>
     </section>
 
     <section class="actions">
-      <div class="action">
+      <button class="action" data-command="uygulama">
         <span>📱</span>
         <h3>Uygulama</h3>
-        <p>Android ve iOS uygulamaları oluştur.</p>
-      </div>
+        <p>Mobil uygulama fikri oluştur.</p>
+      </button>
 
-      <div class="action">
+      <button class="action" data-command="oyun">
         <span>🎮</span>
         <h3>Oyun</h3>
-        <p>2D ve 3D oyun fikirleri üret.</p>
-      </div>
+        <p>2D / 3D oyun fikri üret.</p>
+      </button>
 
-      <div class="action">
+      <button class="action" data-command="web">
         <span>🌐</span>
         <h3>Web Site</h3>
-        <p>Modern web projeleri hazırla.</p>
-      </div>
+        <p>Modern web sitesi planla.</p>
+      </button>
 
-      <div class="action">
+      <button class="action" data-command="güvenlik">
         <span>🛡️</span>
         <h3>Güvenlik</h3>
-        <p>Projeni güvenli hale getir.</p>
-      </div>
+        <p>Proje güvenlik kontrolü yap.</p>
+      </button>
     </section>
 
     <section class="projects">
@@ -85,15 +76,15 @@
       <div class="project-card">
         <div>
           <h3>Ferhat AI Mobil</h3>
-          <p>Premium arayüz hazırlanıyor</p>
+          <p>V6 akıllı asistan sistemi</p>
         </div>
         <span>🚀</span>
       </div>
 
       <div class="project-card">
         <div>
-          <h3>Web Uygulama</h3>
-          <p>Netlify üzerinde yayında</p>
+          <h3>GitHub Pages</h3>
+          <p>Yayın sistemi aktif</p>
         </div>
         <span>🌐</span>
       </div>
@@ -102,27 +93,25 @@
     <section class="chat">
       <h2>Ferhat AI Asistan</h2>
 
-      <div class="bubble ai">
-        Merhaba Ferhat, bugün ne oluşturmak istiyorsun?
+      <div id="chatMessages" class="chat-messages">
+        <div class="bubble ai">
+          Merhaba Ferhat, bugün ne oluşturmak istiyorsun?
+        </div>
       </div>
 
-      <div class="bubble user">
-        Yeni proje oluştur
-      </div>
-
-      <div class="typing">
+      <div id="typing" class="typing hidden">
         <span></span><span></span><span></span>
       </div>
 
       <div class="chat-input">
-        <input type="text" placeholder="Mesaj yaz..." />
-        <button>➤</button>
+        <input id="chatInput" type="text" placeholder="Mesaj yaz..." />
+        <button id="sendBtn">➤</button>
       </div>
     </section>
 
   </main>
 
-  <button class="voice-float">🎤</button>
+  <button id="voiceFloat" class="voice-float">🎤</button>
 
   <nav class="bottom-nav">
     <a class="active" href="#">🏠<span>Ana</span></a>
@@ -133,5 +122,6 @@
   </nav>
 
   <script src="app.js"></script>
+
 </body>
 </html>
