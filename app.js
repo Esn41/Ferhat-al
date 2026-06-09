@@ -1,57 +1,71 @@
-const input = document.querySelector(".chat-input input");
-const sendBtn = document.querySelector(".chat-input button");
+const chatInput = document.getElementById("chatInput");
+const sendBtn = document.getElementById("sendBtn");
+const chatMessages = document.getElementById("chatMessages");
+const typing = document.getElementById("typing");
 
-const aiBubble = document.querySelector(".bubble.ai");
-
-function cevapVer() {
-  const mesaj = input.value.toLowerCase();
-
-  if (mesaj.includes("uygulama")) {
-    aiBubble.innerHTML =
-      "📱 Android ve iOS uygulaması oluşturma moduna geçildi.";
-  }
-
-  else if (mesaj.includes("oyun")) {
-    aiBubble.innerHTML =
-      "🎮 Oyun geliştirme moduna geçildi.";
-  }
-
-  else if (mesaj.includes("web")) {
-    aiBubble.innerHTML =
-      "🌐 Web sitesi oluşturma moduna geçildi.";
-  }
-
-  else if (mesaj.includes("güvenlik")) {
-    aiBubble.innerHTML =
-      "🛡️ Güvenlik analizi başlatıldı.";
-  }
-
-  else if (mesaj.includes("merhaba")) {
-    aiBubble.innerHTML =
-      "👋 Merhaba Ferhat, sana nasıl yardımcı olabilirim?";
-  }
-
-  else {
-    aiBubble.innerHTML =
-      "🤖 Ferhat AI komutunu işliyor...";
-  }
-
-  input.value = "";
+function addMessage(text, type) {
+    const div = document.createElement("div");
+    div.className = "bubble " + type;
+    div.innerText = text;
+    chatMessages.appendChild(div);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-sendBtn.addEventListener("click", cevapVer);
+function aiReply(message) {
 
-input.addEventListener("keypress", function(e) {
-  if (e.key === "Enter") {
-    cevapVer();
-  }
+    typing.classList.remove("hidden");
+
+    setTimeout(() => {
+
+        typing.classList.add("hidden");
+
+        let cevap = "Komut alındı.";
+
+        const msg = message.toLowerCase();
+
+        if(msg.includes("uygulama")){
+            cevap = "📱 Yeni mobil uygulama fikri oluşturuldu.";
+        }
+
+        else if(msg.includes("oyun")){
+            cevap = "🎮 Yeni oyun konsepti hazırlandı.";
+        }
+
+        else if(msg.includes("web")){
+            cevap = "🌐 Modern web sitesi planı hazır.";
+        }
+
+        else if(msg.includes("güvenlik")){
+            cevap = "🛡️ Güvenlik analizi tamamlandı.";
+        }
+
+        else if(msg.includes("merhaba")){
+            cevap = "👋 Merhaba Ferhat, sana nasıl yardımcı olabilirim?";
+        }
+
+        addMessage(cevap,"ai");
+
+    },1200);
+}
+
+sendBtn.addEventListener("click", () => {
+
+    const text = chatInput.value.trim();
+
+    if(!text) return;
+
+    addMessage(text,"user");
+
+    chatInput.value = "";
+
+    aiReply(text);
+
 });
 
-const voiceBtn = document.querySelector(".voice-float");
+chatInput.addEventListener("keypress",(e)=>{
 
-if (voiceBtn) {
-  voiceBtn.addEventListener("click", () => {
-    aiBubble.innerHTML =
-      "🎤 Sesli komut sistemi V6 aktif.";
-  });
-}
+    if(e.key==="Enter"){
+        sendBtn.click();
+    }
+
+});
