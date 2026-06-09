@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ferhat AI V4</title>
+  <title>Ferhat AI V5</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
   <main class="app">
 
     <header class="topbar">
@@ -18,12 +19,18 @@
           <p><span></span> AI Online</p>
         </div>
       </div>
-      <button class="profile">👤</button>
+
+      <div class="top-actions">
+        <button>🔔</button>
+        <button>👤</button>
+      </div>
     </header>
 
     <section class="hero">
+      <div class="badge">⚡ Premium AI Platform</div>
+
       <h1>Merhaba Ferhat 👋</h1>
-      <p>Bugün uygulama, oyun veya web sitesi oluşturalım.</p>
+      <p>Uygulama, oyun, web sitesi ve görevlerini yapay zekâ ile oluştur.</p>
 
       <div class="command-box">
         <input type="text" placeholder="Ne oluşturmak istiyorsun?" />
@@ -31,37 +38,81 @@
       </div>
     </section>
 
+    <section class="stats">
+      <div>
+        <strong>12</strong>
+        <span>Proje</span>
+      </div>
+      <div>
+        <strong>4</strong>
+        <span>Görev</span>
+      </div>
+      <div>
+        <strong>AI</strong>
+        <span>Aktif</span>
+      </div>
+    </section>
+
     <section class="actions">
       <div class="action">
         <span>📱</span>
         <h3>Uygulama</h3>
-        <p>Android ve iOS</p>
+        <p>Android ve iOS uygulamaları oluştur.</p>
       </div>
 
       <div class="action">
         <span>🎮</span>
         <h3>Oyun</h3>
-        <p>2D / 3D</p>
+        <p>2D ve 3D oyun fikirleri üret.</p>
       </div>
 
       <div class="action">
         <span>🌐</span>
         <h3>Web Site</h3>
-        <p>Modern tasarım</p>
+        <p>Modern web projeleri hazırla.</p>
       </div>
 
       <div class="action">
-        <span>🤖</span>
-        <h3>AI Sohbet</h3>
-        <p>Akıllı asistan</p>
+        <span>🛡️</span>
+        <h3>Güvenlik</h3>
+        <p>Projeni güvenli hale getir.</p>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2>Son Projeler</h2>
+
+      <div class="project-card">
+        <div>
+          <h3>Ferhat AI Mobil</h3>
+          <p>Premium arayüz hazırlanıyor</p>
+        </div>
+        <span>🚀</span>
+      </div>
+
+      <div class="project-card">
+        <div>
+          <h3>Web Uygulama</h3>
+          <p>Netlify üzerinde yayında</p>
+        </div>
+        <span>🌐</span>
       </div>
     </section>
 
     <section class="chat">
       <h2>Ferhat AI Asistan</h2>
 
-      <div class="bubble ai">Merhaba Ferhat, nasıl bir proje yapmak istiyorsun?</div>
-      <div class="bubble user">Yeni proje oluştur</div>
+      <div class="bubble ai">
+        Merhaba Ferhat, bugün ne oluşturmak istiyorsun?
+      </div>
+
+      <div class="bubble user">
+        Yeni proje oluştur
+      </div>
+
+      <div class="typing">
+        <span></span><span></span><span></span>
+      </div>
 
       <div class="chat-input">
         <input type="text" placeholder="Mesaj yaz..." />
@@ -71,11 +122,15 @@
 
   </main>
 
+  <button class="voice-float">🎤</button>
+
   <nav class="bottom-nav">
     <a class="active" href="#">🏠<span>Ana</span></a>
     <a href="#">🤖<span>AI</span></a>
     <a href="#">➕<span>Oluştur</span></a>
+    <a href="#">📂<span>Projeler</span></a>
     <a href="#">⚙️<span>Ayarlar</span></a>
   </nav>
+
 </body>
 </html>
